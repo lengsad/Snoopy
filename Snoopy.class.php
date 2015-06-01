@@ -815,6 +815,7 @@ class Snoopy
 		{
 			if(!is_array($this->rawheaders))
 				$this->rawheaders = (array)$this->rawheaders;
+			reset($this->rawheaders);
 			while(list($headerKey,$headerVal) = each($this->rawheaders))
 				$headers .= $headerKey.": ".$headerVal."\r\n";
 		}
@@ -979,6 +980,7 @@ class Snoopy
 		{
 			if(!is_array($this->rawheaders))
 				$this->rawheaders = (array)$this->rawheaders;
+			reset($this->rawheaders);
 			while(list($headerKey,$headerVal) = each($this->rawheaders))
 				$headers[] = $headerKey.": ".$headerVal;
 		}
